@@ -1,14 +1,16 @@
 import React from 'react';
 import logo from '.././legionImg007.png'
-class Contact extends React.Component {
+class AppFoot extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
     return (
-    <p> test contact test</p>
+      <footer id="app-footer">
+    <img src={logo} id="footer-img"/>
+        </footer>
     )
   }
 }
-export default Contact;
+export default AppFoot;

@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
     background-color: white;
     color: black;
 }
@@ -11,12 +11,62 @@
 .App-header {
   /* min-height: 100vh; */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+#legion-logo {
+  width: 35%;
+  padding-left: 1.5em;
+  padding-top: 1em;
+}
+
+#logo-label {
+  padding-left: 1.5em;
+  display: block;
+  font-size: medium;
+}
+
+#logo-div {
+  vertical-align: top;
+  display: inline-block;
+}
+
+#app-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E53638;
+  color: white;
+  /* text-align: center; */
+}
+
+#footer-img {
+  width: 10%;
+  float: right;
+}
+
+
+#nav-bar {
+  width: 100%;
+  display: block;
+  background-color: #E53638;
+  height: 3em;
+  text-align: center;
+}
+.buttons {
+  height: 2em;
+  margin: auto;
+  padding: 0.5em;
+}
+
+.buttons:hover {
+  color: whitesmoke;
 }
