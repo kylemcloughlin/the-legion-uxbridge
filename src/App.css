@@ -15,6 +15,8 @@
   /* align-items: center; */
   /* justify-content: center; */
   font-size: calc(10px + 2vmin);
+  background: url('./legionFront.jpg') no-repeat;
+  opacity: .5;
 }
 
 .App-link {
@@ -34,8 +36,11 @@
 }
 
 #logo-div {
+  opacity: 1 !important;
   vertical-align: top;
   display: inline-block;
+  /* background-image: url('./legionFront.jpg'); */
+  /* background: #4fffff url('./legionFront.jpg') no-repeat; */
 }
 
 #app-footer {
