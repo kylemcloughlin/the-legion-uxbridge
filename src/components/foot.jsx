@@ -1,15 +1,7 @@
 import React from 'react';
 import logo from '.././legionImg007.png';
-import BookingModal from '.././components/bookingsModal.jsx'
 
 class AppFoot extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      modalIsOpen: false
-    };
-
-  }
 
   openModal = () => {
   this.setState({ modalIsOpen: true });
@@ -23,14 +15,12 @@ class AppFoot extends React.Component {
     return (
       <footer id="app-footer">
       <button>Become a Member</button>
-      <button onClick={this.openModal}>book the hall</button>
-       <BookingModal open={this.state.modalIsOpen} openModal={this.openModal} closeModal={this.closeModal}/>
-      <div>
+      {/* <div>
         <label>todays events:</label>
         <p> today's events here</p>
           <label>Upcoming events:</label>
           <p> upcoming's events here</p>
-      </div>
+      </div> */}
     <img alt="logo" src={logo} id="footer-img"/>
         </footer>
     )

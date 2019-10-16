@@ -1,5 +1,12 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { DateTimePicker } from 'react-widgets'
+import Moment from 'moment';
+import momentLocalizer from 'react-widgets-moment';
+import 'react-widgets/dist/css/react-widgets.css';
+
+Moment.locale('en')
+momentLocalizer()
 const customStyles = {
   content: {
     top: '50%',
@@ -28,15 +35,19 @@ class BookingModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
+          <h2 ref={subtitle => this.subtitle = subtitle}>Booking</h2>
           <button onClick={this.props.closeModal}>close</button>
           <div>I am a modal</div>
           <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+            <input placeholder="event-title"/>
+            <DateTimePicker
+              defaultValue={new Date()}
+
+              onChange={(e) => {console.log(e)}}
+
+            />
+
+            <input placeholder="event-discription"/>
           </form>
         </Modal>
 

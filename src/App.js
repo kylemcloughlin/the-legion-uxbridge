@@ -3,7 +3,7 @@ import AppHead from "./components/header.jsx";
 import AppFoot from "./components/foot.jsx";
 import Nav from "./components/nav.jsx"
 import Home from "./components/home.jsx"
-import Calender from "./components/calender.jsx"
+import BookHall from "./components/calender.jsx"
 import Contact from "./components/contactUs.jsx"
 import './App.css';
 // import { tsPropertySignature } from '@babel/types';
@@ -33,7 +33,7 @@ class App extends React.Component {
             this.state.page === 'Home' ? ( <Home/>) : (null)
         }
         {
-           this.state.page === 'Calender' ? ( <Calender/>) : (null)
+           this.state.page === 'Calender' ? ( <BookHall/>) : (null)
         }
         {
           this.state.page === 'Contact' ? ( <Contact/> ) : (null)

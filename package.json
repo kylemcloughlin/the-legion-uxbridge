@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@lls/react-light-calendar": "^2.0.7",
+    "moment": "^2.24.0",
     "react": "^16.10.2",
+    "react-big-calendar": "^0.22.1",
     "react-dom": "^16.10.2",
     "react-modal": "^3.10.1",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-widgets": "^4.4.11",
+    "react-widgets-moment": "^4.0.27"
   },
   "scripts": {
     "start": "react-scripts start",
