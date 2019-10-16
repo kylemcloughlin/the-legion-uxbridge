@@ -6,7 +6,7 @@ import Home from "./components/home.jsx"
 import Calender from "./components/calender.jsx"
 import Contact from "./components/contactUs.jsx"
 import './App.css';
-import { tsPropertySignature } from '@babel/types';
+// import { tsPropertySignature } from '@babel/types';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,6 +38,9 @@ class App extends React.Component {
         {
           this.state.page === 'Contact' ? ( <Contact/> ) : (null)
         }
+         {
+           this.state.page === 'Gallery' ? ( <p>Gallery</p> ) : (null)
+         }
       </body>
       <AppFoot/>
     </div>
