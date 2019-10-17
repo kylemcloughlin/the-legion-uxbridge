@@ -19,14 +19,78 @@ const customStyles = {
 }
 
 class BookingModal extends React.Component {
- 
+  constructor(props){
+    super(props)
+    let start = new Date();
+    let end = new Date();
+    start.setDate(start.getDate() + 1)
+    start.setHours(12) 
+    start.setMinutes(30)
+    end.setHours(start.getHours() + 1)
+    end.setMinutes(30)
+    this.state = {
+      title: null,
+      start: start,
+      end: end,
+      discription: null,
+      allDay: false
+
+    }
+  }
     afterOpenModal = () => {
       // references are now sync'd and can be accessed.
       this.subtitle.style.color = '#f00';
     }
-
+   _handleTitle = (e) => {
+    console.log(`title: ${e.target.value}`, e)
+    this.setState({
+      title: e.target.value
+    })
+  }
+   _handleStartDate = (e) => { 
+    let stringE = e.toString();
+    stringE = stringE.split(" ")
+     let newDate = [stringE[1], stringE[2], ",", stringE[3] , stringE[4]]
+    console.log(newDate.join(" "))
+    console.log(stringE)
+     this.setState({
+      date: e
+     })
+  }
+  _handleEndDate = (e) => {
+    console.log(`date ${e}`)
+    this.setState({
+      end: e
+    })
+  }
+   _handleDiscription = (e) => { 
+    console.log(`discription: ${e.target.value}`)
+     this.setState({
+      discription: e.target.value
+     })
+  }
+  _handleSubmit = () => {
+    let startToString = this.state.start.toString();
+    let endToString = this.state.end.toString();
+    startToString = startToString.split(" ")
+    endToString = endToString.split(" ")
+    let newStartDate = [startToString[1], startToString[2], ",", startToString[3], startToString[4]]
+    let newEndDate = [startToString[1], startToString[2], ",", startToString[3], endToString[4]]
+    let output = {
+      title: this.state.title,
+      start: new Date(newStartDate.join(" ")),
+      end: new Date(newEndDate.join(" ")),
+      allDay: false,
+      resource: false
+    }
+    this.props.event(output)
+  
+    this.props.closeModal()
+  }
 
     render() {
+
+
       return (
         <Modal
           isOpen={this.props.open}
@@ -39,16 +103,19 @@ class BookingModal extends React.Component {
           <button onClick={this.props.closeModal}>close</button>
           <div>I am a modal</div>
           <form>
-            <input placeholder="event-title"/>
+            <input placeholder="event-title" onChange={this._handleTitle}/>
             <DateTimePicker
-              defaultValue={new Date()}
-
-              onChange={(e) => {console.log(e)}}
-
-            />
-
-            <input placeholder="event-discription"/>
+              defaultValue={this.state.start}
+              format="MMM, DD, YYYY"
+              onChange={this._handleStartDate}/>
+            <DateTimePicker
+              defaultValue={this.state.start}
+              date={false}
+              onChange={this._handleEndDate} />
+            <input placeholder="event-discription" onChange={this._handleDiscription}/>
+          
           </form>
+        <button onClick={this._handleSubmit}>submit</button>
         </Modal>
 
       )
