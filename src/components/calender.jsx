@@ -45,7 +45,8 @@ class BookHall extends React.Component {
       startDate: new Date(), // Today
        endDate: new Date(startDate).setDate(date.getDate() + 6), // Today + 6 days
         modalIsOpen: false,
-      eventList: myEventsList
+      eventList: myEventsList,
+      
     } 
   }
   openModal = () => {
@@ -58,6 +59,9 @@ class BookHall extends React.Component {
   _handleEvents = (input) => {
     console.log("hit")
     console.table(input)
+    let event = {
+
+    }
     let prev = this.state.eventList
     this.setState({
       eventList: [...prev, input]
@@ -80,12 +84,17 @@ class BookHall extends React.Component {
     return (
    <div className="calendar-div">
         <button onClick={this.openModal}>book the hall</button>
+        {
+          this.state.modalIsOpen ? (null) : (
           <Calendar
             localizer={localizer}
           events={this.state.eventList}
             startAccessor="start"
             endAccessor="end"
           />
+          
+          )
+        }
         <BookingModal open={this.state.modalIsOpen} openModal={this.openModal} closeModal={this.closeModal} event={this._handleEvents}/>    
    </div>
     )

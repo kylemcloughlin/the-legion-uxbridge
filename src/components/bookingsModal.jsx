@@ -3,13 +3,21 @@ import Modal from 'react-modal';
 import { DateTimePicker } from 'react-widgets'
 import Moment from 'moment';
 import momentLocalizer from 'react-widgets-moment';
+import {Carousel} from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import hall01 from './hall01.jpeg';
+import hall02 from './hall02.jpg';
+
 import 'react-widgets/dist/css/react-widgets.css';
 
 Moment.locale('en')
 momentLocalizer()
 const customStyles = {
+
   content: {
     top: '50%',
+    width: '80%',
+    height: '80%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
@@ -101,7 +109,22 @@ class BookingModal extends React.Component {
         >
           <h2 ref={subtitle => this.subtitle = subtitle}>Booking</h2>
           <button onClick={this.props.closeModal}>close</button>
-          <div>I am a modal</div>
+          <div>
+            <Carousel>
+              <div>
+                <img src={hall01} />
+            
+              </div>
+              <div>
+                <img src={hall02}/>
+                
+              </div>
+              {/* <div>
+                <img src="assets/3.jpeg" />
+                <p className="legend">Legend 3</p>
+              </div> */}
+            </Carousel>
+          </div>
           <form>
             <input placeholder="event-title" onChange={this._handleTitle}/>
             <DateTimePicker
@@ -123,3 +146,6 @@ class BookingModal extends React.Component {
   }
 
   export default BookingModal;
+
+
+

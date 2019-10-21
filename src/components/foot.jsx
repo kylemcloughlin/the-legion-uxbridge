@@ -21,7 +21,7 @@ class AppFoot extends React.Component {
           <label>Upcoming events:</label>
           <p> upcoming's events here</p>
       </div> */}
-    <img alt="logo" src={logo} id="footer-img"/>
+    {/* <img alt="logo" src={logo} id="footer-img"/> */}
         </footer>
     )
   }

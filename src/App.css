@@ -80,3 +80,7 @@
 .calendar-div{
   height: 30em;
 }
+#img-gallery-div {
+  width: 50%;
+  padding-left: 25%;
+}
