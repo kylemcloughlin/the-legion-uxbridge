@@ -7,7 +7,7 @@ import {Carousel} from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import hall01 from './hall01.jpeg';
 import hall02 from './hall02.jpg';
-
+import hall03 from './hall03.jpg'
 import 'react-widgets/dist/css/react-widgets.css';
 
 Moment.locale('en')
@@ -109,20 +109,17 @@ class BookingModal extends React.Component {
         >
           <h2 ref={subtitle => this.subtitle = subtitle}>Booking</h2>
           <button onClick={this.props.closeModal}>close</button>
-          <div>
-            <Carousel>
+          <div className="carousel-container">
+            <Carousel showThumbs={false} infiniteLoop={true}>
               <div>
                 <img src={hall01} />
-            
               </div>
               <div>
                 <img src={hall02}/>
-                
               </div>
-              {/* <div>
-                <img src="assets/3.jpeg" />
-                <p className="legend">Legend 3</p>
-              </div> */}
+              <div>
+                <img src={hall03}/>
+              </div>
             </Carousel>
           </div>
           <form>
