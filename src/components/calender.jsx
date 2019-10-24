@@ -416,7 +416,8 @@ class BookHall extends React.Component {
             localizer={localizer}
           events={this.state.eventList}
             startAccessor="start"
-            endAccessor="end"
+              endAccessor="end" 
+              onSelectEvent={(e) => { console.log('hit', e)}}
           />
           
           )

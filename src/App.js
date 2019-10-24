@@ -7,6 +7,8 @@ import Gallery from "./components/gallery.jsx"
 import BookHall from "./components/calender.jsx"
 import Contact from "./components/contactUs.jsx"
 import './App.css';
+import Logo from './legionImg007.png';
+// 
 // import { tsPropertySignature } from '@babel/types';
 
 class App extends React.Component {
@@ -27,6 +29,7 @@ class App extends React.Component {
       <div className="App">
       <header className="App-header">
      <AppHead/>
+             <img alt="logo" src={Logo} id="footer-img" />
       </header>
      <Nav page={this.setPage}/>
       <body>
