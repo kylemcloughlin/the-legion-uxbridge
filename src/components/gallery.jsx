@@ -47,9 +47,12 @@ class Gallery extends React.Component {
     ]
 
     return (
-      <div id="img-gallery-div">  
+     <div id="center-gallery">
+
+     <div id="img-gallery-div">  
         <ImageGallery items={images} />
       </div>
+     </div>
     )
   }
 }

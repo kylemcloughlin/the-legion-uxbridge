@@ -14,9 +14,9 @@ class Home extends React.Component {
         by volunteers.</p>
       </div>
       <img className="photo" src={legion}/>
-      <div className='mission-pos'>
-        <h2>Our MISSION: </h2>
-          <p className="mission-div">Serving veterans and their dependents, promoting Remembrance, and acting in the service of Canada and its communities.</p>
+        <div className='mission-pos' id="mission-div">
+        <h3 className="mission-h2">Our MISSION: </h3>
+          <p >Serving veterans and their dependents, promoting Remembrance, and acting in the service of Canada and its communities.</p>
       </div>
     </div>
     )
