@@ -148,3 +148,46 @@ hr {
   border: none;
   transition: .3s ease-in-out;
 }
+
+
+.home-container{
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-div {
+    border: 2px solid red;
+    border-radius: 2em;
+        padding: 1em;
+    width: 50%;
+}
+
+.mission-div{
+  /* background-color: pink */
+ border: 2px solid red;
+ border-radius: 2em;
+        padding: 1em;
+    width: 20%;
+    height: 20em;
+
+}
+ .mission-pos {
+     position: absolute;
+     top: 25%;
+     left: 4%;
+     
+ }
+  .welcome-pos {
+   position: absolute;
+   top: 25%;
+   left: 38%;
+
+  }
+.photo {
+  width: 25%;
+   border: 2px solid red;
+   border-radius: 2em;
+       position: absolute;
+       top: 60%;
+       left: 38%;
+}
