@@ -18,6 +18,16 @@ class Home extends React.Component {
         <h3 className="mission-h2">Our MISSION: </h3>
           <p >Serving veterans and their dependents, promoting Remembrance, and acting in the service of Canada and its communities.</p>
       </div>
+      <div className='facebook-container'> 
+          <a href="https://www.facebook.com/Uxbridge-Legion-Branch-170-121692301237944/" target="_blank" class="effect">
+        <label className='circle'>f</label>
+          </a>
+        <span> connect with us on facebook</span>
+      </div>
+      {/* <div className='pipes-container' >
+          <label className='circle'></label>
+          <span> connect to us on facebook</span>
+      </div> */}
     </div>
     )
   }

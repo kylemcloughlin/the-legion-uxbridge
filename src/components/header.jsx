@@ -9,7 +9,7 @@ class AppHead extends React.Component {
       
       <div id="logo-div">
         <img alt="legion-banner" src={rightLogo} id="legion-logo"/>
-        <label id="logo-label">Uxbridge, Ontario, Canada</label>
+        <label id="logo-label">Branch 107 Uxbridge, Ontario, Canada</label>
         {/* <img alt="logo" src={leftLogo} id="footer-img" /> */}
       </div>
     )

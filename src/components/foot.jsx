@@ -14,7 +14,6 @@ class AppFoot extends React.Component {
   render() {
     return (
       <footer id="app-footer">
-      <button>Become a Member</button>
       {/* <div>
         <label>todays events:</label>
         <p> today's events here</p>
