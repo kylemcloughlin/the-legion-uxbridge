@@ -311,3 +311,19 @@ sans-serif;
      font-size: x-large;
      color: white;
 }
+
+.modal-input {
+    margin-bottom: .5em;
+    /* margin-top: 0.5em; */
+    padding-left: .7em;
+    width: 98.5%;
+    height: 1.5em;
+    font-size: larger;
+    border-radius: 4px;
+    border: solid 1px lightgrey;
+}
+
+.date-inputs {
+     margin-bottom: .5em;
+     /* margin-top: .5em; */
+}

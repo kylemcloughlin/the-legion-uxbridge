@@ -17,7 +17,7 @@ const customStyles = {
   content: {
     top: '50%',
     width: '80%',
-    height: '80%',
+    height: '30%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
@@ -109,7 +109,7 @@ class BookingModal extends React.Component {
         >
           <h2 ref={subtitle => this.subtitle = subtitle}>Booking</h2>
           <button onClick={this.props.closeModal}>close</button>
-          <div className="carousel-container">
+          {/* <div className="carousel-container">
             <Carousel showThumbs={false} infiniteLoop={true}>
               <div>
                 <img src={hall01} />
@@ -121,18 +121,18 @@ class BookingModal extends React.Component {
                 <img src={hall03}/>
               </div>
             </Carousel>
-          </div>
+          </div> */}
           <form>
-            <input placeholder="event-title" onChange={this._handleTitle}/>
-            <DateTimePicker
+            <input className='modal-input' placeholder="event title" onChange={this._handleTitle}/>
+            <input className='modal-input' placeholder="event discription" onChange={this._handleDiscription}/>
+            <DateTimePicker className='date-inputs'
               defaultValue={this.state.start}
               format="MMM, DD, YYYY"
               onChange={this._handleStartDate}/>
-            <DateTimePicker
+            <DateTimePicker 
               defaultValue={this.state.start}
               date={false}
               onChange={this._handleEndDate} />
-            <input placeholder="event-discription" onChange={this._handleDiscription}/>
           
           </form>
         <button onClick={this._handleSubmit}>submit</button>
