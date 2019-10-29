@@ -3,11 +3,11 @@ import Modal from 'react-modal';
 import { DateTimePicker } from 'react-widgets'
 import Moment from 'moment';
 import momentLocalizer from 'react-widgets-moment';
-import {Carousel} from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import hall01 from './hall01.jpeg';
-import hall02 from './hall02.jpg';
-import hall03 from './hall03.jpg'
+// import {Carousel} from 'react-responsive-carousel';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import hall01 from './hall01.jpeg';
+// import hall02 from './hall02.jpg';
+// import hall03 from './hall03.jpg'
 import 'react-widgets/dist/css/react-widgets.css';
 
 Moment.locale('en')

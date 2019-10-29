@@ -1,7 +1,16 @@
 import React from 'react';
-import legion from './legion-outside.jpg'
+import legion from './legion-outside.jpg';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import hall01 from './hall01.jpeg';
+import hall02 from './hall02.jpg';
+import hall03 from './hall03.jpg';
+import emailImg from './email-wht.jpg'
+import img2 from './email-blk.jpg'
 class Home extends React.Component {
-
+  email = () => {
+    window.location.href = `mailto: legion170@powergate.ca`
+  }
   render() {
     return (
     <div className="home-container">
@@ -13,7 +22,21 @@ class Home extends React.Component {
           rebuilt. It has since had several renovations. It is notable that most of the work on the legion has been done 
         by volunteers.</p>
       </div>
-      <img className="photo" src={legion}/>
+      {/* <img className="photo" src={legion}/> */}
+         {/* <div className="photo"> */}
+          <Carousel className="photo" showThumbs={false} infiniteLoop={true} showStatus={false} autoplay={true}>
+              <div>
+                <img src={hall01} />
+              </div>
+              <div>
+                <img src={hall02}/>
+              </div>
+              <div>
+                <img src={hall03}/>
+              </div>
+            </Carousel>
+          {/* </div>   */}
+       
         <div className='mission-pos' id="mission-div">
         <h3 className="mission-h2">Our MISSION: </h3>
           <p >Serving veterans and their dependents, promoting Remembrance, and acting in the service of Canada and its communities.</p>
@@ -24,10 +47,10 @@ class Home extends React.Component {
           </a>
         <span> connect with us on facebook</span>
       </div>
-      {/* <div className='pipes-container' >
-          <label className='circle'></label>
-          <span> connect to us on facebook</span>
-      </div> */}
+      <div className='pipes-container' >
+          <img className='email' src={emailImg} onClick={this.email} onMouseOver={e => (e.currentTarget.src = img2)} onMouseOut={e => (e.currentTarget.src = emailImg)} />
+          <span>Email</span>
+      </div>
     </div>
     )
   }
