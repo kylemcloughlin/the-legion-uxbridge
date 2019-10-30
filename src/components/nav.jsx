@@ -1,7 +1,10 @@
 import React from 'react';
 
+
 class Nav extends React.Component {
- 
+  email = () => {
+    window.location.href = `mailto: legion170@powergate.ca`
+  }
   render() {
     return (
     <navbar id="nav-bar">
@@ -12,7 +15,7 @@ class Nav extends React.Component {
         <a id="four" className="buttons" onClick={() => this.props.page('Contact')}>Contact Us</a>
         <hr />
         </ul>
-
+        
     </navbar>
     )
   }

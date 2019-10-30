@@ -7,7 +7,7 @@
     "react": "^16.10.2",
     "react-big-calendar": "^0.22.1",
     "react-dom": "^16.10.2",
-    "react-image-gallery": "^0.9.1",
+    "react-grid-gallery": "^0.5.5",
     "react-mailto": "^0.4.0",
     "react-modal": "^3.10.1",
     "react-responsive-carousel": "^3.1.50",

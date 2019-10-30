@@ -3,7 +3,7 @@ import AppHead from "./components/header.jsx";
 import AppFoot from "./components/foot.jsx";
 import Nav from "./components/nav.jsx"
 import Home from "./components/home.jsx"
-import Gallery from "./components/gallery.jsx"
+import ImgGallery from "./components/gallery.jsx"
 import BookHall from "./components/calender.jsx"
 import Contact from "./components/contactUs.jsx"
 import './App.css';
@@ -43,7 +43,7 @@ class App extends React.Component {
           this.state.page === 'Contact' ? ( <Contact/> ) : (null)
         }
         {
-           this.state.page === 'Gallery' ? ( <Gallery/> ) : (null)
+           this.state.page === 'Gallery' ? ( <ImgGallery/> ) : (null)
         }
       </body>
       <AppFoot/>

@@ -5,8 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import hall01 from './hall01.jpeg';
 import hall02 from './hall02.jpg';
 import hall03 from './hall03.jpg';
-import emailImg from './email-wht.jpg'
-import img2 from './email-blk.jpg'
+
 class Home extends React.Component {
   email = () => {
     window.location.href = `mailto: legion170@powergate.ca`
@@ -48,8 +47,10 @@ class Home extends React.Component {
         <span> connect with us on facebook</span>
       </div>
       <div className='pipes-container' >
-          <img className='email' src={emailImg} onClick={this.email} onMouseOver={e => (e.currentTarget.src = img2)} onMouseOut={e => (e.currentTarget.src = emailImg)} />
-          <span>Email</span>
+          <a href="https://http://uxbridgepipeband.com/" target="_blank" class="effect">
+          <label className='circle'>UP</label>
+          </a>
+          <span>Uxbrige Pipes And Drums</span>
       </div>
     </div>
     )

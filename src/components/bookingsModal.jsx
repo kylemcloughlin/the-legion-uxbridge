@@ -17,7 +17,7 @@ const customStyles = {
   content: {
     top: '50%',
     width: '80%',
-    height: '30%',
+    height: '40%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
@@ -107,35 +107,36 @@ class BookingModal extends React.Component {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={subtitle => this.subtitle = subtitle}>Booking</h2>
-          <button onClick={this.props.closeModal}>close</button>
-          {/* <div className="carousel-container">
-            <Carousel showThumbs={false} infiniteLoop={true}>
-              <div>
-                <img src={hall01} />
-              </div>
-              <div>
-                <img src={hall02}/>
-              </div>
-              <div>
-                <img src={hall03}/>
-              </div>
-            </Carousel>
-          </div> */}
+          <button id='exit' onClick={this.props.closeModal}>close</button>
+          <h2 id='modal-title' ref={subtitle => this.subtitle = subtitle}>Book Your Events</h2>
           <form>
+           <div className='label-handler'>
+            <label className='modal-label'>Event</label>
             <input className='modal-input' placeholder="event title" onChange={this._handleTitle}/>
-            <input className='modal-input' placeholder="event discription" onChange={this._handleDiscription}/>
+           </div>
+            <div className='label-handler'>
+              <label className='modal-label'>Discription</label>            
+            <input className='modal-input-2' placeholder="event discription" onChange={this._handleDiscription}/>
+            </div>
+            <span lassName='label-handler'>
+              <label className='modal-label'>Date</label>
             <DateTimePicker className='date-inputs'
               defaultValue={this.state.start}
               format="MMM, DD, YYYY"
               onChange={this._handleStartDate}/>
-            <DateTimePicker 
+            </span>
+
+            <span className='label-handler'>
+              <label className='modal-label'>
+              Time
+              </label>
+            <DateTimePicker className='date-inputs'
               defaultValue={this.state.start}
               date={false}
               onChange={this._handleEndDate} />
-          
+              </span>
           </form>
-        <button onClick={this._handleSubmit}>submit</button>
+          <button className='button-modal' onClick={this._handleSubmit}>submit</button>
         </Modal>
 
       )
